@@ -1,13 +1,276 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Source AI - Coming soon!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>opensourceai.it — Read the model, not the label.</title>
+  <meta name="description" content="An independent guide to open source AI. CLEAR tells you if a model is open enough for your job.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Open Source AI - Coming Soon, stay tuned!</h1>
+<div class="site-wrap">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="#top" class="site-logo">
+        <span class="site-logo__badge">os</span>
+        <span class="site-logo__name">opensourceai<span class="site-logo__tld">.it</span></span>
+      </a>
+      <nav class="site-nav">
+        <a href="#state">No definition</a>
+        <a href="#voices">Who's talking</a>
+        <a href="#clear">CLEAR for your job</a>
+        <a href="#build" class="nav-cta">Build it ↗</a>
+      </nav>
     </div>
+  </header>
+
+  <main id="top" class="site-main">
+
+    <!-- ============ HERO ============ -->
+    <section class="section section--hero">
+      <h1 class="section__h1">
+        Read the model, <em>not the label.</em>
+      </h1>
+      <p class="section__lead">
+        The same three words — "open," "open source," "open weights" — get stamped on models that are worlds apart in what they let you do. The yes/no fight (OSI vs Meta vs everyone else) makes good copy but it won't tell you whether a model fits the job in front of you.
+      </p>
+      <p class="section__body">
+        <strong>CLEAR</strong> is our answer. Not another definition, but a decision layer on top of it: pick what you want to do with the model and get a plain <strong>Go / Caution / No-go</strong> for that job, with the reason attached.
+      </p>
+      <div class="hero-ctas">
+        <a href="#clear" class="btn-primary">Try CLEAR on a model →</a>
+        <a href="#build" class="btn-secondary">Build it on GitHub</a>
+      </div>
+    </section>
+
+    <!-- ============ 01 · NO DEFINITION ============ -->
+    <section id="state" class="section">
+      <div class="section__eyebrow">01 · The honest starting point</div>
+      <h2 class="section__h2">There is no agreed definition. That's not a gap in your knowledge. It's the actual state of things.</h2>
+      <p class="section__body" style="max-width:62ch">If you feel confused, you're reading it right. The Economist called it <em>"a battle… over the definition of open-source AI."</em> Three things are true at once:</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__num">01</div>
+          <div class="card__title">A definition exists, and it's contested.</div>
+          <p class="card__body">OSI published <strong>OSAID 1.0</strong> in October 2024: it asks for the code, the weights, and enough information about the data to rebuild the model. Almost no commercial model meets it, and not everyone accepts it as the bar.</p>
+        </div>
+        <div class="card">
+          <div class="card__num">02</div>
+          <div class="card__title">Even the big labs split the words.</div>
+          <p class="card__body">Google's own site separates <strong>"open models"</strong> (free weights, their terms) from <strong>"open source."</strong> "Open" and "open source" are not the same thing, and a major lab says so in writing.</p>
+        </div>
+        <div class="card">
+          <div class="card__num">03</div>
+          <div class="card__title">Almost nothing is fully open.</div>
+          <p class="card__body">Models you can truly rebuild (weights <em>and</em> code <em>and</em> data) are rare (AI2's OLMo, Switzerland's Apertus). The vast majority of "open" models share only the weights, and call it open source.</p>
+        </div>
+      </div>
+
+      <div class="callout-dark">
+        <p>So the word in the middle of all this, "open," does a lot of hidden work. The only way through is to stop arguing about the label and look at what's actually in the box.</p>
+      </div>
+    </section>
+
+    <!-- ============ 02 · VOICES ============ -->
+    <section id="voices" class="section">
+      <div class="section__eyebrow">02 · The map of voices</div>
+      <h2 class="section__h2">Who's talking, and what they actually mean.</h2>
+      <p class="section__body">If you've heard someone talk about open source AI, you've heard one of these voices. Here's where each really stands, in plain terms, current to 2026.</p>
+
+      <div class="voices-grid">
+        <div class="voice-cell">
+          <div class="voice-cell__head">
+            <div class="voice-cell__name">OSI</div>
+            <div class="voice-cell__tag voice-cell__tag--accent">wrote the definition</div>
+          </div>
+          <p class="voice-cell__body">The Open Source Initiative authored OSAID 1.0: code + weights + enough data information to rebuild the model. It even publishes a page warning that <em>"open weights"</em> is not the same as open source.</p>
+        </div>
+
+        <div class="voice-cell">
+          <div class="voice-cell__head">
+            <div class="voice-cell__name">FSF &amp; researchers</div>
+            <div class="voice-cell__tag voice-cell__tag--accent">stricter still</div>
+          </div>
+          <p class="voice-cell__body">The purist line: without the actual training data you can't study or rebuild it, so it isn't free. A 2024 <em>Nature</em> paper argued many "open" AI systems are, in practice, closed.</p>
+        </div>
+
+        <div class="voice-cell">
+          <div class="voice-cell__head">
+            <div class="voice-cell__name">Meta</div>
+            <div class="voice-cell__tag voice-cell__tag--partial">contested claim</div>
+          </div>
+          <p class="voice-cell__body">Calls Llama "open source." But its custom license restricts some uses and the training data is undisclosed, so OSI and others say it doesn't qualify. The loudest, most-cited example of the gap.</p>
+        </div>
+
+        <div class="voice-cell">
+          <div class="voice-cell__head">
+            <div class="voice-cell__name">Google</div>
+            <div class="voice-cell__tag voice-cell__tag--muted">splits the words</div>
+          </div>
+          <p class="voice-cell__body">On its own cloud site it lists Gemma and Llama as <strong>"open models,"</strong> separate from <strong>"open source models."</strong> Honest about the distinction, while still marketing "open."</p>
+        </div>
+
+        <div class="voice-cell">
+          <div class="voice-cell__head">
+            <div class="voice-cell__name">OpenAI</div>
+            <div class="voice-cell__tag voice-cell__tag--muted">closed, then not</div>
+          </div>
+          <p class="voice-cell__body">Built closed despite the name. Then in 2025 it released <strong>gpt-oss</strong>: open-weight, Apache-2.0. Even the closed camp now ships "open" models. The weights, not the data.</p>
+        </div>
+
+        <div class="voice-cell">
+          <div class="voice-cell__head">
+            <div class="voice-cell__name">DeepSeek &amp; Chinese labs</div>
+            <div class="voice-cell__tag voice-cell__tag--muted">open as strategy</div>
+          </div>
+          <p class="voice-cell__body">V3 and R1 shipped under the MIT license, weights free to all, a deliberate move that put open-weight models on the world's front pages and rattled Silicon Valley.</p>
+        </div>
+
+        <div class="voice-cell">
+          <div class="voice-cell__head">
+            <div class="voice-cell__name">Linux Foundation</div>
+            <div class="voice-cell__tag voice-cell__tag--muted">tries to bring order</div>
+          </div>
+          <p class="voice-cell__body">Its <strong>MOF</strong> grades how open a model is (three classes); its <strong>OpenMDW</strong> license (2025) is built for models, because software licenses don't cleanly fit weights and data.</p>
+        </div>
+
+        <div class="voice-cell">
+          <div class="voice-cell__head">
+            <div class="voice-cell__name">EU &amp; sovereign Europe</div>
+            <div class="voice-cell__tag voice-cell__tag--muted">makes it law</div>
+          </div>
+          <p class="voice-cell__body">The AI Act demands a public training-data summary and gives genuinely open models a narrow carve-out. Projects like Switzerland's Apertus push fully-open as a digital-sovereignty strategy.</p>
+        </div>
+      </div>
+
+      <p class="section__note">Notice the pattern: almost everyone says "open." Almost no one means "you can rebuild it." That's the whole problem in one line.</p>
+    </section>
+
+    <!-- ============ 03 · CLEAR ============ -->
+    <section id="clear" class="section">
+      <div class="section__eyebrow">03 · How to decide</div>
+      <h2 class="section__h2">CLEAR doesn't rate "openness." It tells you if a model is <em>open enough for your job</em>.</h2>
+      <p class="section__body" style="max-width:64ch">OSI's OSAID already answers "is it open source?" (yes / no). It's a good legal anchor, and almost every commercial model fails it. That tells you nothing about whether to use Llama in a product, deploy Mistral in a hospital, or fine-tune DeepSeek on your data. CLEAR takes the same facts OSAID looks at and maps them to those decisions.</p>
+
+      <div class="panel-muted">
+        <div class="panel-muted__label">CLEAR vs OSAID vs MOF, side by side</div>
+        <div class="compare-grid">
+          <div>
+            <div class="compare-box__title">OSAID <span>· OSI</span></div>
+            <div class="compare-box__subtitle">The legal bar</div>
+            <p class="compare-box__body">Answers <em>"is it open source?"</em> with one yes/no. Rigorous and important, but binary. The honest truth: almost everything fails it, so it can't help you pick between the models that fail.</p>
+            <div class="compare-box__audience">audience: producers, lawyers</div>
+          </div>
+          <div>
+            <div class="compare-box__title">MOF <span>· Linux Foundation</span></div>
+            <div class="compare-box__subtitle">The inventory</div>
+            <p class="compare-box__body">Grades ~16 separate artifacts in three completeness classes. Thorough and producer-facing, made to prove what you released, not to help an adopter pick a model for next Monday.</p>
+            <div class="compare-box__audience">audience: model producers</div>
+          </div>
+          <div>
+            <div class="compare-box__title">CLEAR <span>· this site</span></div>
+            <div class="compare-box__subtitle compare-box__subtitle--open">The decision layer</div>
+            <p class="compare-box__body">Takes those same facts and answers <strong>Go / Caution / No-go</strong> for the job you actually have. OSAID protects the producer's claim of openness. CLEAR protects the adopter's decision.</p>
+            <div class="compare-box__audience">audience: people who have to ship</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="section__note" style="max-width:78ch;margin-top:18px">Behind every CLEAR verdict are five facts: <strong>C</strong>ode, <strong>L</strong>icense, <strong>E</strong>xamples (training data), <strong>A</strong>ccess (weights), <strong>R</strong>eproducibility. They're the same ingredients OSAID inspects; CLEAR just reads them through the lens of what you want to do.</p>
+
+      <p class="section__body" style="margin-top:34px">Pick a model. CLEAR shows what it lets you actually do.</p>
+
+      <div style="margin-top:24px">
+        <div class="model-chips-label">Choose a model</div>
+        <div class="model-chips" id="model-chips"></div>
+      </div>
+
+      <div class="decoder-card" id="decoder-card"></div>
+
+      <div class="license-note">
+        <div class="license-note__title">Why does a model have an <code>Apache</code> license, anyway?</div>
+        <p class="license-note__body">Good instinct: it's half the confusion. Apache-2.0 and MIT are <strong>software</strong> licenses. They fit the code cleanly, but it's legally unclear they even cover the <em>weights</em> (a file of numbers may not be copyrightable) or the <em>data</em>. That mismatch is exactly why a model-specific license, <strong>OpenMDW</strong>, appeared in 2025. The takeaway: a permissive license stamped on a model does <strong>not</strong> mean the whole model is open. In CLEAR terms it usually scores only the <strong>L</strong>.</p>
+      </div>
+
+      <p class="section__note" style="margin-top:18px">CLEAR is an open draft, not a verdict carved in stone. <a href="#build" style="color:var(--accent);font-weight:600;text-decoration:underline">Help refine the criteria and the scores ↓</a></p>
+    </section>
+
+    <!-- ============ 04 · BUILD ============ -->
+    <section id="build" class="build-section">
+      <div class="section__eyebrow">
+        <span class="eyebrow-dot"></span>
+        04 · Build it with us
+      </div>
+      <h2>CLEAR is a draft. Help make it the standard.</h2>
+      <p>Pointing out that "open source AI" has no agreed meaning is easy, and on its own, useless. <strong style="color:#fff">CLEAR v0.1</strong> is our attempt at the harder thing: square the circle with a concrete, factual scorecard anyone can apply. It's deliberately unfinished and openly governed. If you work with these models, the criteria and the scores are yours to shape, on GitHub, in the open.</p>
+
+      <div class="build-cards">
+        <a href="https://github.com/flossai/clear" target="_blank" rel="noopener" class="build-card">
+          <div class="build-card__tag">★ repo</div>
+          <div class="build-card__title">Read &amp; star the spec</div>
+          <div class="build-card__body">The full CLEAR rubric and the current model scores, versioned in the open, free to fork.</div>
+        </a>
+        <a href="https://github.com/flossai/clear/issues" target="_blank" rel="noopener" class="build-card">
+          <div class="build-card__tag">! issues</div>
+          <div class="build-card__title">Challenge a criterion</div>
+          <div class="build-card__body">Think the five axes are wrong, or a threshold is too soft? Open an issue and make the case.</div>
+        </a>
+        <a href="https://github.com/flossai/clear/pulls" target="_blank" rel="noopener" class="build-card">
+          <div class="build-card__tag">+ pull</div>
+          <div class="build-card__title">Score a model</div>
+          <div class="build-card__body">Add a model's CLEAR card with sources. Each score is a reviewable, citable pull request.</div>
+        </a>
+        <a href="https://github.com/flossai/clear/discussions" target="_blank" rel="noopener" class="build-card">
+          <div class="build-card__tag">¶ talk</div>
+          <div class="build-card__title">Join the discussion</div>
+          <div class="build-card__body">Where the definition fight happens in good faith: vendors, researchers and public bodies welcome.</div>
+        </a>
+      </div>
+
+      <div class="build-ctas">
+        <a href="https://github.com/flossai/clear" target="_blank" rel="noopener" class="btn-white">
+          <span class="btn-white__tag">GitHub</span>
+          Open the CLEAR repository →
+        </a>
+        <span class="build-meta">MIT-licensed · governed in public · v0.1</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="footer-about">
+          <div class="footer-about__name">opensourceai<span style="color:var(--accent)">.it</span></div>
+          <p class="footer-about__body">An independent, non-commercial guide to a label nobody agrees on. We don't host models or sell a standard. We maintain <strong>CLEAR</strong>, an open scorecard that makes "is it open?" a concrete, model-by-model judgement.</p>
+        </div>
+        <nav class="footer-nav">
+          <div class="footer-nav__heading">On this page</div>
+          <div class="footer-nav__links">
+            <a href="#state">No definition</a>
+            <a href="#voices">Who's talking</a>
+            <a href="#clear">CLEAR for your job</a>
+            <a href="#build">Build it</a>
+            <a href="https://github.com/flossai/clear" target="_blank" rel="noopener" class="footer-gh">GitHub ↗</a>
+          </div>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 opensourceai.it · Independent · work in progress</span>
+        <span>Maintained with support from <a href="https://bitos.it" target="_blank" rel="noopener">BITOS</a></span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="script.js"></script>
 </body>
 </html>
