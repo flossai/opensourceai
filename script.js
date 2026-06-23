@@ -161,19 +161,30 @@ function renderDecoder() {
       <div class="decoder-card__osaid">
         <div class="osaid-label">OSAID (OSI)</div>
         <span class="badge badge--${m.osaid.state === 'open' ? 'open' : 'closed'}">
-          ${m.osaid.state === 'open' ? 'Meets OSAID' : 'Not certified'}
+          ${m.osaid.state === 'open' ? 'Meets OSAID' : 'Fails OSAID'}
         </span>
         <div class="osaid-note">${m.osaid.note}</div>
       </div>
     </div>
 
     <div class="decoder-card__intents">
-      <div class="intents-label">CLEAR verdict, by what you actually want to do</div>
+      <div class="intents-label">Operational guidance by use case</div>
       ${intentsHTML}
     </div>
 
     <div class="decoder-card__parts">
-      <div class="parts-label">The five facts behind the verdict</div>
+      <div class="parts-label">The five CLEAR facts — what's actually in this model</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
+        <span style="font-size:12px;color:var(--faint)"><strong style="color:var(--ink)">C</strong> Code</span>
+        <span style="font-size:12px;color:var(--faint)">·</span>
+        <span style="font-size:12px;color:var(--faint)"><strong style="color:var(--ink)">L</strong> License</span>
+        <span style="font-size:12px;color:var(--faint)">·</span>
+        <span style="font-size:12px;color:var(--faint)"><strong style="color:var(--ink)">E</strong> Examples (training data)</span>
+        <span style="font-size:12px;color:var(--faint)">·</span>
+        <span style="font-size:12px;color:var(--faint)"><strong style="color:var(--ink)">A</strong> Access (weights)</span>
+        <span style="font-size:12px;color:var(--faint)">·</span>
+        <span style="font-size:12px;color:var(--faint)"><strong style="color:var(--ink)">R</strong> Reproducibility</span>
+      </div>
       ${partsHTML}
       <p class="decoder-card__bottom">${m.bottom}</p>
     </div>
