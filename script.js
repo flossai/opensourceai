@@ -58,9 +58,9 @@ const MODELS = {
     name: 'GPT-4o', vendor: 'OpenAI', marketedAs: 'Closed (and says so)',
     osaid: { state: 'closed', note: 'Fails every definition of open.' },
     intents: [
-      { key: 'commercial', label: 'Ship it in a commercial product',          verdict: 'caution', reason: 'Usable through a paid API, but you can\'t self-host or drop the OpenAI dependency; lock-in is the cost.' },
+      { key: 'commercial', label: 'Ship it in a commercial product',          verdict: 'stop',    reason: 'API-only terms: you can\'t self-host, modify, or redistribute the model. Structural vendor lock-in and dependency on OpenAI\'s pricing and availability.' },
       { key: 'regulated',  label: 'Deploy in a public body or regulated sector', verdict: 'stop',    reason: 'API-only: your data leaves your premises and there\'s no transparency. A hard blocker for many public bodies.' },
-      { key: 'finetune',   label: 'Fine-tune it on your own data',             verdict: 'caution', reason: 'Only OpenAI\'s hosted tuning; you never hold the weights.' },
+      { key: 'finetune',   label: 'Fine-tune it on your own data',             verdict: 'stop',    reason: 'OpenAI\'s hosted tuning is the only option; you never hold the resulting weights and they remain on OpenAI\'s infrastructure under their terms.' },
       { key: 'audit',      label: 'Reproduce or audit it',                     verdict: 'stop',    reason: 'Nothing is released, so no audit or reproduction is possible.' },
     ],
     parts: [
